@@ -9,12 +9,15 @@ namespace PuzzleSystem
     public class ItemController : MonoBehaviour
     {
         [Header("Select Item Type")]
-        [SerializeField] private bool redDoor;
-        [SerializeField] private bool redKey;
+        [SerializeField] private bool normalDoor;
+        [SerializeField] private bool keyOnlyDoor;
+        [SerializeField] private bool key;
         [SerializeField] private bool lever;
         [SerializeField] private bool button;
         [SerializeField] private bool hintPlaque;
         [SerializeField] private ItemInventory itemInventory;
+        
+        [Header("For items only")]
         [SerializeField] private AudioSource audioSource;
 
         private ItemDoorController doorObject;
@@ -31,7 +34,7 @@ namespace PuzzleSystem
         private void Start()
         {
 
-            if (redDoor)
+            if (normalDoor || keyOnlyDoor)
             {
                 doorObject = GetComponent<ItemDoorController>();
             }else if (lever)
@@ -45,16 +48,19 @@ namespace PuzzleSystem
 
         public void ObjectInteraction()
         {
-            if (redDoor)
+            if (normalDoor)
             {
                 doorObject.PlayAnimation();
+            }else if (keyOnlyDoor)
+            {
+                doorObject.PlaySecondaryAnimation();
             }
             else
             {
                 audioSource.Play();
-                if (redKey)
+                if (key)
                 {
-                    itemInventory.hasRedKey = true;
+                    itemInventory.hasKey = true;
                     gameObject.SetActive(false);
                 }
                 else if (lever)

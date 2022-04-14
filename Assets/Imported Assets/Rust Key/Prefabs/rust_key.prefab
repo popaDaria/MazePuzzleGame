@@ -109,8 +109,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d9149d80511f1479f77ef43873ac2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redDoor: 0
-  redKey: 1
+  normalDoor: 0
+  keyOnlyDoor: 0
+  key: 1
   lever: 0
   button: 0
   hintPlaque: 0

@@ -69,9 +69,12 @@ MonoBehaviour:
   timeToShowUI: 1
   showDoorLockedUI: {fileID: 0}
   showDoorOpenedUI: {fileID: 0}
-  keyInventory: {fileID: 0}
+  itemInventory: {fileID: 0}
   waitTimer: 1
   pauseInteraction: 0
+  doorLockedSound: {fileID: 0}
+  doorUnlockSound: {fileID: 0}
+  doorOpeningSound: {fileID: 0}
 --- !u!114 &4599076926233153126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,9 +87,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d9149d80511f1479f77ef43873ac2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redDoor: 1
-  redKey: 0
-  keyInventory: {fileID: 0}
+  normalDoor: 0
+  keyOnlyDoor: 0
+  key: 0
+  lever: 0
+  button: 0
+  hintPlaque: 0
+  itemInventory: {fileID: 0}
+  audioSource: {fileID: 0}
+  leverAnimName: LeverAnim
+  hintUI: {fileID: 0}
+  timeToShowUI: 1
 --- !u!1001 &4599076924327618766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -286,9 +297,12 @@ MonoBehaviour:
   timeToShowUI: 1
   showDoorLockedUI: {fileID: 0}
   showDoorOpenedUI: {fileID: 0}
-  keyInventory: {fileID: 0}
+  itemInventory: {fileID: 0}
   waitTimer: 1
   pauseInteraction: 0
+  doorLockedSound: {fileID: 0}
+  doorUnlockSound: {fileID: 0}
+  doorOpeningSound: {fileID: 0}
 --- !u!114 &4599076925283810271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,9 +315,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d9149d80511f1479f77ef43873ac2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redDoor: 1
-  redKey: 0
-  keyInventory: {fileID: 0}
+  normalDoor: 0
+  keyOnlyDoor: 0
+  key: 0
+  lever: 0
+  button: 0
+  hintPlaque: 0
+  itemInventory: {fileID: 0}
+  audioSource: {fileID: 0}
+  leverAnimName: LeverAnim
+  hintUI: {fileID: 0}
+  timeToShowUI: 1
 --- !u!64 &4599076925452143427
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -355,9 +377,12 @@ MonoBehaviour:
   timeToShowUI: 1
   showDoorLockedUI: {fileID: 0}
   showDoorOpenedUI: {fileID: 0}
-  keyInventory: {fileID: 0}
+  itemInventory: {fileID: 0}
   waitTimer: 1
   pauseInteraction: 0
+  doorLockedSound: {fileID: 0}
+  doorUnlockSound: {fileID: 0}
+  doorOpeningSound: {fileID: 0}
 --- !u!114 &4599076925452143429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,9 +395,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d9149d80511f1479f77ef43873ac2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redDoor: 1
-  redKey: 0
-  keyInventory: {fileID: 0}
+  normalDoor: 0
+  keyOnlyDoor: 0
+  key: 0
+  lever: 0
+  button: 0
+  hintPlaque: 0
+  itemInventory: {fileID: 0}
+  audioSource: {fileID: 0}
+  leverAnimName: LeverAnim
+  hintUI: {fileID: 0}
+  timeToShowUI: 1
 --- !u!1001 &4599076925948198321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -586,11 +619,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1cc8f6261feb5c41ae01249fcb2794f, type: 3}
+--- !u!1 &4599837441084350016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1921744265530198, guid: c1cc8f6261feb5c41ae01249fcb2794f, type: 3}
+  m_PrefabInstance: {fileID: 4599076926052898070}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4601703878246203356 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4430288972344010, guid: c1cc8f6261feb5c41ae01249fcb2794f, type: 3}
   m_PrefabInstance: {fileID: 4599076926052898070}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &7867539793653007056
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4599837441084350016}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: bdb48a089cf1d034e8625b964de6b19a, type: 3}
 --- !u!1001 &4599076926227905608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -656,8 +708,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1cc8f6261feb5c41ae01249fcb2794f, type: 3}
+--- !u!1 &4599837440722188062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1921744265530198, guid: c1cc8f6261feb5c41ae01249fcb2794f, type: 3}
+  m_PrefabInstance: {fileID: 4599076926227905608}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4601703878691427970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4430288972344010, guid: c1cc8f6261feb5c41ae01249fcb2794f, type: 3}
   m_PrefabInstance: {fileID: 4599076926227905608}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &6822364458499893547
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4599837440722188062}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: bdb48a089cf1d034e8625b964de6b19a, type: 3}

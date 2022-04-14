@@ -6,7 +6,7 @@ namespace PuzzleSystem
 {
     public class ItemInventory : MonoBehaviour
     {
-        public bool hasRedKey;
+        public bool hasKey;
         public bool leverOn;
         public bool buttonsPressed;
     }

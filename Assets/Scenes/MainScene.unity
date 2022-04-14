@@ -596,7 +596,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1872
+  m_Name: pb_Mesh-2326
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1095,6 +1095,10 @@ PrefabInstance:
       propertyPath: showDoorOpenedUI
       value: 
       objectReference: {fileID: 1876714962}
+    - target: {fileID: 4599076926233153126, guid: 702318d90849e2749981ef41cc54f078, type: 3}
+      propertyPath: keyOnlyDoor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4599076926233153126, guid: 702318d90849e2749981ef41cc54f078, type: 3}
       propertyPath: keyInventory
       value: 
@@ -2225,7 +2229,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-172134
+  m_Name: pb_Mesh-1952
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2553,7 +2557,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1360
+  m_Name: pb_Mesh-1622
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2852,6 +2856,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1876714962}
     - target: {fileID: 4599076926233153126, guid: 702318d90849e2749981ef41cc54f078, type: 3}
+      propertyPath: normalDoor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599076926233153126, guid: 702318d90849e2749981ef41cc54f078, type: 3}
       propertyPath: keyInventory
       value: 
       objectReference: {fileID: 783770642}
@@ -3054,7 +3062,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1724
+  m_Name: pb_Mesh-2178
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3613,6 +3621,10 @@ PrefabInstance:
       value: InteractiveObject
       objectReference: {fileID: 0}
     - target: {fileID: 685709515944620993, guid: 78df1db2fbc8ec64f949fac0c05bf693, type: 3}
+      propertyPath: key
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 685709515944620993, guid: 78df1db2fbc8ec64f949fac0c05bf693, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 413479490}
@@ -3692,7 +3704,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1382
+  m_Name: pb_Mesh-1644
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3856,7 +3868,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1884
+  m_Name: pb_Mesh-2338
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4280,7 +4292,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1550
+  m_Name: pb_Mesh-1982
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4647,6 +4659,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: InteractiveObject
       objectReference: {fileID: 0}
+    - target: {fileID: 5898722289388819818, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1467158410}
+    - target: {fileID: 5898722289388819818, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
+      propertyPath: itemInventory
+      value: 
+      objectReference: {fileID: 783770642}
     - target: {fileID: 7727883797297684363, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -4706,11 +4726,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8547448563377378517, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
   m_PrefabInstance: {fileID: 522436842}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &522436845 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7727883797297684363, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
-  m_PrefabInstance: {fileID: 522436842}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &522436846
 Animator:
   serializedVersion: 3
@@ -4730,28 +4745,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &522436847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522436845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08d9149d80511f1479f77ef43873ac2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  redDoor: 0
-  redKey: 0
-  lever: 1
-  button: 0
-  hintPlaque: 0
-  itemInventory: {fileID: 783770642}
-  audioSource: {fileID: 1467158410}
-  leverAnimName: LeverAnim
-  hintUI: {fileID: 0}
-  timeToShowUI: 2
 --- !u!1 &523376039
 GameObject:
   m_ObjectHideFlags: 0
@@ -5494,6 +5487,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1876714962}
     - target: {fileID: 4599076926233153126, guid: 702318d90849e2749981ef41cc54f078, type: 3}
+      propertyPath: normalDoor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599076926233153126, guid: 702318d90849e2749981ef41cc54f078, type: 3}
       propertyPath: keyInventory
       value: 
       objectReference: {fileID: 783770642}
@@ -5710,7 +5707,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3150
+  m_Name: pb_Mesh-1580
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6191,7 +6188,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1582
+  m_Name: pb_Mesh-2014
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6424,6 +6421,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: InteractiveObject
       objectReference: {fileID: 0}
+    - target: {fileID: 5898722289388819818, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1467158410}
+    - target: {fileID: 5898722289388819818, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
+      propertyPath: itemInventory
+      value: 
+      objectReference: {fileID: 783770642}
     - target: {fileID: 7727883797297684363, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -6483,11 +6488,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8547448563377378517, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
   m_PrefabInstance: {fileID: 712543790}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &712543793 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7727883797297684363, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
-  m_PrefabInstance: {fileID: 712543790}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &712543794
 Animator:
   serializedVersion: 3
@@ -6507,28 +6507,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &712543795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 712543793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08d9149d80511f1479f77ef43873ac2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  redDoor: 0
-  redKey: 0
-  lever: 1
-  button: 0
-  hintPlaque: 0
-  itemInventory: {fileID: 783770642}
-  audioSource: {fileID: 1467158410}
-  leverAnimName: LeverAnim
-  hintUI: {fileID: 0}
-  timeToShowUI: 2
 --- !u!1 &712816504
 GameObject:
   m_ObjectHideFlags: 0
@@ -7064,6 +7042,10 @@ PrefabInstance:
       value: InteractiveObject
       objectReference: {fileID: 0}
     - target: {fileID: 685709515944620993, guid: 78df1db2fbc8ec64f949fac0c05bf693, type: 3}
+      propertyPath: key
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 685709515944620993, guid: 78df1db2fbc8ec64f949fac0c05bf693, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 413479490}
@@ -7276,7 +7258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 336747a9c4d2bea46b70c7b15a0230e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasRedKey: 0
+  hasKey: 0
   leverOn: 0
   buttonsPressed: 0
 --- !u!4 &783770643
@@ -7304,7 +7286,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-153304
+  m_Name: pb_Mesh-1936
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7905,7 +7887,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-159170
+  m_Name: pb_Mesh-1344
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8859,7 +8841,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1708
+  m_Name: pb_Mesh-2162
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9601,6 +9583,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: InteractiveObject
       objectReference: {fileID: 0}
+    - target: {fileID: 5898722289388819818, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1467158410}
+    - target: {fileID: 5898722289388819818, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
+      propertyPath: itemInventory
+      value: 
+      objectReference: {fileID: 783770642}
     - target: {fileID: 7727883797297684363, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -9656,7 +9646,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1896
+  m_Name: pb_Mesh-2350
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9820,7 +9810,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-8432
+  m_Name: pb_Mesh-1332
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10307,6 +10297,10 @@ PrefabInstance:
       value: InteractiveObject
       objectReference: {fileID: 0}
     - target: {fileID: 685709515944620993, guid: 78df1db2fbc8ec64f949fac0c05bf693, type: 3}
+      propertyPath: key
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 685709515944620993, guid: 78df1db2fbc8ec64f949fac0c05bf693, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 413479490}
@@ -10394,7 +10388,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1768
+  m_Name: pb_Mesh-2222
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10696,6 +10690,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1876714962}
     - target: {fileID: 4599076926233153126, guid: 702318d90849e2749981ef41cc54f078, type: 3}
+      propertyPath: normalDoor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599076926233153126, guid: 702318d90849e2749981ef41cc54f078, type: 3}
       propertyPath: keyInventory
       value: 
       objectReference: {fileID: 783770642}
@@ -10898,7 +10896,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1756
+  m_Name: pb_Mesh-2210
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11163,6 +11161,10 @@ PrefabInstance:
       propertyPath: showDoorOpenedUI
       value: 
       objectReference: {fileID: 1876714962}
+    - target: {fileID: 4599076926233153126, guid: 702318d90849e2749981ef41cc54f078, type: 3}
+      propertyPath: normalDoor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4599076926233153126, guid: 702318d90849e2749981ef41cc54f078, type: 3}
       propertyPath: keyInventory
       value: 
@@ -11701,7 +11703,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-155588
+  m_Name: pb_Mesh-1458
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11941,7 +11943,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1566
+  m_Name: pb_Mesh-1998
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12414,6 +12416,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1876714962}
     - target: {fileID: 4599076926233153126, guid: 702318d90849e2749981ef41cc54f078, type: 3}
+      propertyPath: keyOnlyDoor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599076926233153126, guid: 702318d90849e2749981ef41cc54f078, type: 3}
       propertyPath: keyInventory
       value: 
       objectReference: {fileID: 783770642}
@@ -12446,7 +12452,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-182776
+  m_Name: pb_Mesh-2132
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12682,33 +12688,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1455415358 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7727883797297684363, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
-  m_PrefabInstance: {fileID: 1107057394}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1455415363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1455415358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08d9149d80511f1479f77ef43873ac2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  redDoor: 0
-  redKey: 0
-  lever: 1
-  button: 0
-  hintPlaque: 0
-  itemInventory: {fileID: 783770642}
-  audioSource: {fileID: 1467158410}
-  leverAnimName: LeverAnim
-  hintUI: {fileID: 0}
-  timeToShowUI: 2
 --- !u!1 &1467158409
 GameObject:
   m_ObjectHideFlags: 0
@@ -13504,7 +13483,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-153300
+  m_Name: pb_Mesh-1904
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14376,8 +14355,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d9149d80511f1479f77ef43873ac2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redDoor: 1
-  redKey: 0
+  normalDoor: 0
+  keyOnlyDoor: 0
+  key: 0
   lever: 0
   button: 0
   hintPlaque: 0
@@ -14944,7 +14924,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1740
+  m_Name: pb_Mesh-2194
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16309,7 +16289,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-153302
+  m_Name: pb_Mesh-1920
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16604,7 +16584,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-6668
+  m_Name: pb_Mesh-1610
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16780,6 +16760,10 @@ PrefabInstance:
     - target: {fileID: 374289202576707483, guid: 78df1db2fbc8ec64f949fac0c05bf693, type: 3}
       propertyPath: m_TagString
       value: InteractiveObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 685709515944620993, guid: 78df1db2fbc8ec64f949fac0c05bf693, type: 3}
+      propertyPath: key
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 685709515944620993, guid: 78df1db2fbc8ec64f949fac0c05bf693, type: 3}
       propertyPath: audioSource
@@ -18135,6 +18119,10 @@ PrefabInstance:
       propertyPath: keyInventory
       value: 
       objectReference: {fileID: 783770642}
+    - target: {fileID: 4599076926233153124, guid: 702318d90849e2749981ef41cc54f078, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4599076926233153125, guid: 702318d90849e2749981ef41cc54f078, type: 3}
       propertyPath: keyInventory
       value: 
@@ -18163,6 +18151,10 @@ PrefabInstance:
       propertyPath: showDoorOpenedUI
       value: 
       objectReference: {fileID: 1876714962}
+    - target: {fileID: 4599076926233153126, guid: 702318d90849e2749981ef41cc54f078, type: 3}
+      propertyPath: normalDoor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4599076926233153126, guid: 702318d90849e2749981ef41cc54f078, type: 3}
       propertyPath: keyInventory
       value: 

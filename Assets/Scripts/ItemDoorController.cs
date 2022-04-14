@@ -13,7 +13,7 @@ namespace PuzzleSystem
 
         [Header("Animation Names")] 
         [SerializeField] private string[] openAnimationNames = {"GateLeftAnim", "GateRightAnim"};
-        // [SerializeField] private string closeAnimationName = "DoorClose";
+        // [SerializeField] private string[] closeAnimationNames = {"GateLeftAnimClose","GateRightAnimClose"};
 
         [Header("Door UI")]
         [SerializeField] private int timeToShowUI = 1;
@@ -56,30 +56,9 @@ namespace PuzzleSystem
         
         public void PlayAnimation()
         {
-            if (itemInventory.hasRedKey || itemInventory.leverOn || itemInventory.buttonsPressed)
+            if (itemInventory.hasKey || itemInventory.leverOn || itemInventory.buttonsPressed)
             {
-                if (!doorOpen && !pauseInteraction)
-                {
-                    doorUnlockSound.Play();
-                    doorOpeningSound.Play();
-                    StartCoroutine(ShowDoorOpened());
-                    for (int i = 0; i < openAnimationNames.Length; i++)
-                    {
-                        doorAnim[i].Play(openAnimationNames[i],0,0.0f);
-                    }
-                    doorOpen = true;
-                    itemInventory.hasRedKey = false;
-                    itemInventory.leverOn = false;
-                    itemInventory.buttonsPressed = false;
-                    Destroy(gameObject.GetComponent<BoxCollider>());
-                    StartCoroutine(PauseDoorInteraction());
-                }
-                /*else if (doorOpen && !pauseInteraction)
-                {
-                    doorAnim.Play(closeAnimationName,0,0.0f);
-                    doorOpen = false;
-                    StartCoroutine(PauseDoorInteraction());
-                }*/
+                PerformOpenDoorLogic();
             }
             else
             {
@@ -87,6 +66,53 @@ namespace PuzzleSystem
                 StartCoroutine(ShowDoorLocked());
             }
         }
+        
+        public void PlaySecondaryAnimation()
+        {
+            if (itemInventory.hasKey)
+            {
+                PerformOpenDoorLogic();
+            }
+            else
+            {
+                doorLockedSound.Play();
+                StartCoroutine(ShowDoorLocked());
+            }
+        }
+
+        private void PerformOpenDoorLogic()
+        {
+            if (!doorOpen && !pauseInteraction)
+            {
+                doorUnlockSound.Play();
+                doorOpeningSound.Play();
+                StartCoroutine(ShowDoorOpened());
+                for (var i = 0; i < openAnimationNames.Length; i++)
+                {
+                    doorAnim[i].Play(openAnimationNames[i], 0, 0.0f);
+                }
+
+                doorOpen = true;
+                itemInventory.hasKey = false;
+                itemInventory.leverOn = false;
+                itemInventory.buttonsPressed = false;
+                Destroy(gameObject.GetComponent<BoxCollider>());
+                StartCoroutine(PauseDoorInteraction());
+            }
+        }
+
+        /*private void PlayCloseDoorAnimation()
+        {
+            if (doorOpen && !pauseInteraction)
+            {
+                for (int i = 0; i < closeAnimationNames.Length; i++)
+                {
+                    doorAnim[i].Play(closeAnimationNames[i],0,0.0f);
+                }
+                doorOpen = false;
+                StartCoroutine(PauseDoorInteraction());
+            }
+        }*/
     }
 }
 
