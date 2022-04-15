@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinController : MonoBehaviour
 {
     [Header("Win UI")]
-    [SerializeField] private int timeToClose = 15;
     [SerializeField] private GameObject winUI;
     
     private void OnTriggerEnter(Collider other)
@@ -14,16 +14,18 @@ public class WinController : MonoBehaviour
         {
             winUI.SetActive(true);
             Time.timeScale = 0;
-            //TODO: see if necessary
-            AudioListener.pause = true;
             PauseManager.paused = true;
-            StartCoroutine(CloseGame());
         }
     }
 
-    private IEnumerator CloseGame()
+    public void TryAgain()
     {
-        yield return new WaitForSecondsRealtime(timeToClose);
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    
+    public void Quit()
+    {
         Application.Quit();
     }
 }
