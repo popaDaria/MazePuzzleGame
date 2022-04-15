@@ -9,11 +9,11 @@ namespace PuzzleSystem
     {
 
         private Animator[] doorAnim;
-        private bool doorOpen = false;
+        private bool doorOpen;
 
         [Header("Animation Names")] 
         [SerializeField] private string[] openAnimationNames = {"GateLeftAnim", "GateRightAnim"};
-        // [SerializeField] private string[] closeAnimationNames = {"GateLeftAnimClose","GateRightAnimClose"};
+        [SerializeField] private string[] closeAnimationNames = {"GateLeftAnimClose","GateRightAnimClose"};
 
         [Header("Door UI")]
         [SerializeField] private int timeToShowUI = 1;
@@ -22,7 +22,6 @@ namespace PuzzleSystem
         
         [Header("Controls")]
         [SerializeField] private ItemInventory itemInventory;
-        [SerializeField] private int waitTimer = 1;
         [SerializeField] private bool pauseInteraction = false;
         [SerializeField] private AudioSource doorLockedSound;
         [SerializeField] private AudioSource doorUnlockSound;
@@ -33,18 +32,17 @@ namespace PuzzleSystem
             doorAnim = gameObject.GetComponentsInChildren<Animator>();
         }
 
-        private IEnumerator PauseDoorInteraction()
-        {
-            pauseInteraction = true;
-            yield return new WaitForSeconds(waitTimer);
-            pauseInteraction = false;
-        }
-        
         private IEnumerator ShowDoorLocked()
         {
             showDoorLockedUI.SetActive(true);
             yield return new WaitForSeconds(timeToShowUI);
             showDoorLockedUI.SetActive(false);
+        }
+        
+        private IEnumerator PlayLockedSound()
+        {
+            yield return new WaitForSeconds(0.8f);
+            doorLockedSound.Play();
         }
         
         private IEnumerator ShowDoorOpened()
@@ -79,6 +77,20 @@ namespace PuzzleSystem
                 StartCoroutine(ShowDoorLocked());
             }
         }
+        
+        public void PlayCloseDoorAnimation()
+        {
+            if (doorOpen && !pauseInteraction)
+            {
+                doorOpeningSound.Play();
+                StartCoroutine(PlayLockedSound());
+                for (int i = 0; i < closeAnimationNames.Length; i++)
+                {
+                    doorAnim[i].Play(closeAnimationNames[i],0,0.0f);
+                }
+                doorOpen = false;
+            }
+        }
 
         private void PerformOpenDoorLogic()
         {
@@ -97,22 +109,8 @@ namespace PuzzleSystem
                 itemInventory.leverOn = false;
                 itemInventory.buttonsPressed = false;
                 Destroy(gameObject.GetComponent<BoxCollider>());
-                StartCoroutine(PauseDoorInteraction());
             }
         }
-
-        /*private void PlayCloseDoorAnimation()
-        {
-            if (doorOpen && !pauseInteraction)
-            {
-                for (int i = 0; i < closeAnimationNames.Length; i++)
-                {
-                    doorAnim[i].Play(closeAnimationNames[i],0,0.0f);
-                }
-                doorOpen = false;
-                StartCoroutine(PauseDoorInteraction());
-            }
-        }*/
     }
 }
 
