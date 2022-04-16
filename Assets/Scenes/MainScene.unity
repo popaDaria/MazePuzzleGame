@@ -8267,6 +8267,7 @@ MonoBehaviour:
   glitch1: {fileID: 1030394560}
   glitch2: {fileID: 1682575174}
   glitch3: {fileID: 337189102}
+  music: {fileID: 1022904932}
 --- !u!65 &664471693
 BoxCollider:
   m_ObjectHideFlags: 0

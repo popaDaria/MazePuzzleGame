@@ -9,6 +9,7 @@ public class WinManager : MonoBehaviour
     [SerializeField] private GameObject glitch1;
     [SerializeField] private GameObject glitch2;
     [SerializeField] private GameObject glitch3;
+    [SerializeField] private AudioSource music;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -43,10 +44,12 @@ public class WinManager : MonoBehaviour
         StartCoroutine(ShowGlitch(glitch3));
     }
 
-    private static IEnumerator ShowGlitch(GameObject glitchObject)
+    private IEnumerator ShowGlitch(GameObject glitchObject)
     {
         glitchObject.SetActive(true);
+        music.Pause();
         yield return new WaitForSecondsRealtime(0.15f);
         glitchObject.SetActive(false);
+        music.UnPause();
     }
 }
