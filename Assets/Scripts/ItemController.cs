@@ -21,7 +21,7 @@ namespace PuzzleSystem
         [SerializeField] private AudioSource audioSource;
 
         private ItemDoorController doorObject;
-        private ButtonManager buttonManager;
+        private ItemButtonController buttonController;
         
         [Header("Lever anim")]
         [SerializeField] private string leverAnimName = "LeverAnim";
@@ -42,7 +42,7 @@ namespace PuzzleSystem
                 leverAnim = GetComponentInChildren<Animator>();
             }else if (button)
             {
-                buttonManager = GetComponentInParent(typeof(ButtonManager)) as ButtonManager;
+                buttonController = GetComponentInParent(typeof(ItemButtonController)) as ItemButtonController;
             }
         }
 
@@ -71,7 +71,7 @@ namespace PuzzleSystem
                 }
                 else if (button)
                 {
-                    buttonManager.PlayAnimation(gameObject);
+                    buttonController.PlayAnimation(gameObject);
                 }
                 else if (hintPlaque)
                 {

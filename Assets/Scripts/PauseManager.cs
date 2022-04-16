@@ -8,6 +8,7 @@ public class PauseManager : MonoBehaviour
 {
     private PauseAction action;
     public static bool paused;
+    public static bool winPaused;
 
     [Header("References")]
     [SerializeField] private GameObject menuUI;
@@ -42,6 +43,8 @@ public class PauseManager : MonoBehaviour
 
     private void DeterminePause()
     {
+        if (winPaused) return;
+        
         if (!SettingsManager.inSettings)
         {
             if (paused)

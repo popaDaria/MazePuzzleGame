@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace PuzzleSystem
 {
-    public class ButtonManager : MonoBehaviour
+    public class ItemButtonController : MonoBehaviour
     {
 
         [Header("Button solution")]
