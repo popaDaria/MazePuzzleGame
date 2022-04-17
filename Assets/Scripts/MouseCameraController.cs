@@ -22,7 +22,7 @@ public class MouseCameraController : MonoBehaviour
 
     private void Update()
     {
-        if (!PauseManager.paused)
+        if (!PauseManager.paused || WinManager.monologuePause)
         {
             transform.Rotate(Vector3.up, mouseX * Time.deltaTime);
 

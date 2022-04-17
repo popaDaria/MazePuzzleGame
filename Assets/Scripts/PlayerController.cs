@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         playerInputSystem = new PlayerInputSystem();
         cameraHeight = mouseCameraController.mainCamera.localPosition.y;
         
-        var positionX = PlayerPrefs.GetFloat("positionX", 250);
+        var positionX = PlayerPrefs.GetFloat("positionX", 257);
         var positionZ = PlayerPrefs.GetFloat("positionZ", 10);
         gameObject.transform.position = new Vector3(positionX, 0.0f, positionZ);
     }
