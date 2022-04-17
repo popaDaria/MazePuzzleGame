@@ -29,8 +29,8 @@ public class SettingsManager : MonoBehaviour
     private void Start()
     {
         var fxVolume = PlayerPrefs.GetFloat("fxVolume", -15.0f);
-        var musicVolume = PlayerPrefs.GetFloat("musicVolume", -4.5f);
-        var envVolume = PlayerPrefs.GetFloat("environmentVolume", -15.0f);
+        var musicVolume = PlayerPrefs.GetFloat("musicVolume", -15.0f);
+        var envVolume = PlayerPrefs.GetFloat("environmentVolume", -4.5f);
         
         mainMixer.SetFloat("fxVolume", fxVolume);
         fxSlider.value = fxVolume;

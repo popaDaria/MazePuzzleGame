@@ -4,8 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class WinManager : MonoBehaviour
 {
-    [Header("Win UI")]
+    [Header("Win Zone UIs")]
     [SerializeField] private GameObject winUI;
+    [SerializeField] private GameObject controlsUI;
     [SerializeField] private GameObject glitch1;
     [SerializeField] private GameObject glitch2;
     [SerializeField] private GameObject glitch3;
@@ -15,6 +16,7 @@ public class WinManager : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            controlsUI.SetActive(false);
             Time.timeScale = 0;
             PauseManager.paused = true;
             PauseManager.winPaused = true;
@@ -25,6 +27,9 @@ public class WinManager : MonoBehaviour
 
     public void TryAgain()
     {
+        PauseManager.winPaused = false;
+        PauseManager.paused = false;
+        Time.timeScale = 1;
         PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
