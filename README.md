@@ -1,5 +1,5 @@
 # MazePuzzleGame
-This is a simple puzzle solving game where you try to escape a maze and finally be free. What couuld go wrong?
+This is a simple puzzle solving game where you try to escape a maze. What could go wrong?
 
 ### References
 #### Thirt party assets used
