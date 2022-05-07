@@ -2,7 +2,7 @@
 This is a simple puzzle solving game where you try to escape a maze. What could go wrong?
 
 ### YouTube Demo
-YouTube demo link [here]()
+YouTube demo link [here](https://youtu.be/D73txf6mv6w)
 
 ### Unity builds
 Zipped versions of the game (including an SVG of the maze solution) can be found [here](https://drive.google.com/drive/folders/1lK6o8fgVfji8g5k2rFMPgJlPSKVHsGVR?usp=sharing)
