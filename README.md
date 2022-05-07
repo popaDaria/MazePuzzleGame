@@ -1,6 +1,17 @@
 # MazePuzzleGame
 This is a simple puzzle solving game where you try to escape a maze. What could go wrong?
 
+### YouTube Demo
+YouTube demo link [here]()
+
+### Unity builds
+Zipped versions of the game can be found [here](https://drive.google.com/drive/folders/1lK6o8fgVfji8g5k2rFMPgJlPSKVHsGVR?usp=sharing)
+
+### WebGL builds
+*Since this is a 3D game, the builds are not that well supported so for a better playing experience please use a unity build of the game*
+1. Original game build [here](https://popadaria.github.io/MazePuzzleWebGL/)
+2. Modificated smaller version (no clouds, one type of trees only, smaller FOV for rendering purposes) [here](https://popadaria.github.io/MazePuzzleWebGLSmall/)
+
 ### References
 #### Thirt party assets used
 
@@ -35,8 +46,3 @@ This is a simple puzzle solving game where you try to escape a maze. What could 
 - [How to use Audio Mixers](https://www.youtube.com/watch?v=vOaQp2x-io0&t=439s)
 - [How to create footstep sound](https://www.youtube.com/watch?v=ih8gyGeC7xs)
 - [How to create a timer](https://www.youtube.com/watch?v=HLz_k6DSQvU&t=452s)
-
-### WebGL builds
-*Since this is a 3D game, the builds are not that well supported so for a better playing experience please use a unity build of the game*
-1. Original game build [here](https://popadaria.github.io/MazePuzzleWebGL/)
-2. Modificated smaller version (no clouds, one type of trees only, smaller FOV for rendering purposes) [here](https://popadaria.github.io/MazePuzzleWebGLSmall/)
