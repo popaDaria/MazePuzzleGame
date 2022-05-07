@@ -5,7 +5,7 @@ This is a simple puzzle solving game where you try to escape a maze. What could 
 YouTube demo link [here]()
 
 ### Unity builds
-Zipped versions of the game can be found [here](https://drive.google.com/drive/folders/1lK6o8fgVfji8g5k2rFMPgJlPSKVHsGVR?usp=sharing)
+Zipped versions of the game (including an SVG of the maze solution) can be found [here](https://drive.google.com/drive/folders/1lK6o8fgVfji8g5k2rFMPgJlPSKVHsGVR?usp=sharing)
 
 ### WebGL builds
 *Since this is a 3D game, the builds are not that well supported so for a better playing experience please use a unity build of the game*
